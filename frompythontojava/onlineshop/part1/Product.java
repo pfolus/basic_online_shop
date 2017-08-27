@@ -10,3 +10,12 @@ public class Product{
 
     public Product(){
     }
+
+    public Product(String name, Float defaultPrice, ProductCategory productCategory){
+        this.name = name;
+        this.defaultPrice = defaultPrice;
+        this.productCategory = productCategory;
+        this.ID = counter;
+        productList.add(this);
+        counter++;
+    }
