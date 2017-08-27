@@ -6,3 +6,10 @@ public class Order implements Orderable{
     public Order(){
         this.status = "new";
     }
+
+    public String getStatus(){
+        return this.status;
+    }
+
+    
+}
