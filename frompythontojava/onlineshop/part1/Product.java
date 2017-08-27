@@ -27,3 +27,16 @@ public class Product{
     public ArrayList<Product> getAllProducts(){
         return productList;
     }
+
+    public ArrayList<Product> getAllProductsBy(ProductCategory productCategory){
+        ArrayList<Product> productListByCat = new ArrayList<Product>();
+
+        for(Product item : productList){
+            if(item.productCategory.equals(productCategory)){
+                productListByCat.add(item);
+            }
+        }
+
+        return productListByCat;
+    }
+}
