@@ -20,5 +20,4 @@ public class Order implements Orderable{
     public Boolean pay(){
         this.status = "payed";
     }
-
 }
