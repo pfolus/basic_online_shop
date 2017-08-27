@@ -1,18 +1,18 @@
 public abstract class AbstractProcess{
 
     public void process(){
-        stepBefore(); // implement directly in abstract superclass (here)
-        action(); // implement in subclasses
-        stepAfter(); // implement directly in abstract superclass (here)
+        stepBefore();
+        action();
+        stepAfter();
     }
 
     public void stepBefore(){
-        //implementation
+        System.out.println("Step Before test");
     }
 
     public abstract void action();
 
     public void stepAfter(){
-        //implementation
+        System.out.println("Step After test");
     }
 }
