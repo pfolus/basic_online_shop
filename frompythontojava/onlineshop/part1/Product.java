@@ -7,3 +7,6 @@ public class Product{
     private Integer ID;
     private static ArrayList<Product> productList = new ArrayList<Product>() ;
     private static Integer counter = 1;
+
+    public Product(){
+    }
