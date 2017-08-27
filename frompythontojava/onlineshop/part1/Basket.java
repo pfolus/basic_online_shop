@@ -28,3 +28,29 @@ public class Basket{
             System.out.println(iterator.next());
         }
     }
+
+    private class ProductIterator implements Iterator{
+        int index;
+
+        @Override
+        public boolean hasNext() {
+           if(index < productList.size()){
+              return true;
+           }
+           return false;
+        }
+
+        @Override
+        public Object next() {
+           if(this.hasNext()){
+              return productList.get(index++);
+           }
+           return null;
+       }
+
+       @Override
+       public void remove(){
+           productList.remove(index - 1);
+       }
+    }
+}
