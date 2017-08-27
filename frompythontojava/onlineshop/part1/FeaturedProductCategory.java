@@ -12,3 +12,8 @@ public class FeaturedProductCategory extends ProductCategory{
         counter++;
     }
 
+
+    public String toString(){
+        return this.getClass().getName() + ":ID:" + this.ID + ",name:" + this.getName();
+    }
+}
