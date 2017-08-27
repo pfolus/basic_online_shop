@@ -19,3 +19,7 @@ public class Product{
         productList.add(this);
         counter++;
     }
+
+    public String toString(){
+        return "ID:" + this.ID + ",name:" + this.name + ",defaultprice:" + this.defaultPrice + ",productcategory:" + this.productCategory;
+    }
