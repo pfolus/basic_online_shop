@@ -12,3 +12,11 @@ public class ProductCategory{
         counter++;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public String toString(){
+        return "ID:" + this.ID + ",name:" + this.getName();
+    }
+}
