@@ -23,3 +23,7 @@ public class Product{
     public String toString(){
         return "ID:" + this.ID + ",name:" + this.name + ",defaultprice:" + this.defaultPrice + ",productcategory:" + this.productCategory;
     }
+
+    public ArrayList<Product> getAllProducts(){
+        return productList;
+    }
