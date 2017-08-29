@@ -20,12 +20,13 @@ public class Application {
 
             showMenu();
             String answer = View.getInput();
+            ArrayList<ProductCategory> categoryList = ProductCategory.getCategoryList();
 
             if (answer.equals("1")) {
                 createProduct();
 
             } else if (answer.equals("2")) {
-                createNewTypeCategory();
+                createNewTypeCategory(categoryList);
 
             } else if (answer.equals("3")) {
                 addProductToBasket(basket);
@@ -95,7 +96,7 @@ public class Application {
 
     }
 
-    public static void createNewTypeCategory() {
+    public static void createNewTypeCategory(ArrayList<ProductCategory> categoryList) {
 
         View.provideCategoryName();
         String catName = View.getInput();
@@ -106,9 +107,9 @@ public class Application {
             View.provideDate();
             String catDate = View.getDate();
 
-            FeaturedProductCategory.createCategory(catName, catDate);
+            categoryList.add(FeaturedProductCategory.createCategory(catName, catDate));
         } else {
-            new ProductCategory(catName);
+            categoryList.add(new ProductCategory(catName));
         }
     }
 
