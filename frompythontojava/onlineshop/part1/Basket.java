@@ -1,3 +1,5 @@
+package frompythontojava.onlineshop.part1;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -9,9 +11,19 @@ public class Basket{
         return new ProductIterator();
     }
 
+    public ArrayList<Product> getProductList() {
+
+        return this.productList;
+    }
+
     public void addProduct(Product product){
         productList.add(product);
     }
+
+    public void clearBasket(){
+
+    productList.clear();
+}
 
     public Boolean removeProduct(Product product){
         for(iterator = getIterator(); iterator.hasNext();){
@@ -27,6 +39,14 @@ public class Basket{
         for(iterator = getIterator(); iterator.hasNext();){
             System.out.println(iterator.next());
         }
+    }
+
+    public Float calculateOrderPrice() {
+        Float sum = 0f;
+        for (Product item : this.productList) {
+            sum += item.getDefaultPrice();
+        }
+        return sum;
     }
 
     private class ProductIterator implements Iterator{

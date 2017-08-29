@@ -1,3 +1,5 @@
+package frompythontojava.onlineshop.part1;
+
 import java.util.ArrayList;
 
 public class Product{
@@ -20,15 +22,23 @@ public class Product{
         counter++;
     }
 
+    public String getName(){
+        return this.name;
+    }
+    
+    public Float getDefaultPrice(){
+        return this.defaultPrice;
+        }
+
     public String toString(){
         return "ID:" + this.ID + ",name:" + this.name + ",defaultprice:" + this.defaultPrice + ",productcategory:" + this.productCategory;
     }
 
-    public ArrayList<Product> getAllProducts(){
+    public static ArrayList<Product> getAllProducts(){
         return productList;
     }
 
-    public ArrayList<Product> getAllProductsBy(ProductCategory productCategory){
+    public static ArrayList<Product> getAllProductsBy(ProductCategory productCategory){
         ArrayList<Product> productListByCat = new ArrayList<Product>();
 
         for(Product item : productList){

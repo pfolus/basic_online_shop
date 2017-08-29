@@ -1,8 +1,10 @@
+package frompythontojava.onlineshop.part2;
+
 public abstract class AbstractProcess{
 
-    public void process(){
+    public void process(Orderable item){
         stepBefore();
-        action();
+        action(item);
         stepAfter();
     }
 
@@ -10,7 +12,7 @@ public abstract class AbstractProcess{
         System.out.println("Step Before test");
     }
 
-    public abstract void action();
+    protected abstract void action(Orderable item);
 
     public void stepAfter(){
         System.out.println("Step After test");

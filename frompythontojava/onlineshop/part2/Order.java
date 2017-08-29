@@ -1,3 +1,5 @@
+package frompythontojava.onlineshop.part2;
+
 public class Order implements Orderable{
     private int id;
     private String status;
@@ -13,11 +15,23 @@ public class Order implements Orderable{
         return this.status;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
     public Boolean checkout(){
-        this.status = "checked";
+        if(!this.status.equals("checked")){
+            this.status = "checked";
+            return true;
+        }
+        return false;
     }
 
     public Boolean pay(){
-        this.status = "payed";
+        if(!this.status.equals("payed")){
+            this.status = "payed";
+            return true;
+        }
+    return false;
     }
 }
