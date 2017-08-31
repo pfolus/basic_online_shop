@@ -188,6 +188,7 @@ public class Application {
 
 
     public static void productAvailability() {
+        System.out.println("type product you want to check: ");
         String getProduct = View.getInput();
         ArrayList<Product> allAvailableProducts = new ArrayList<>();
         ArrayList<Product> allProducts = getAllAvailableProducts();
